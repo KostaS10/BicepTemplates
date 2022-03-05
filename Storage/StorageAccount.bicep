@@ -11,4 +11,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
   sku: {
     name: 'Standard_LRS' 
   }
+  properties: {
+    supportsHttpsTrafficOnly: true
+  }
 }
