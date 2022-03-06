@@ -25,7 +25,12 @@ jobs:
   snyk:
     runs-on: ubuntu-latest
     steps:
+      - name: Code checkout
       - uses: actions/checkout@v2
+      - name: Run Bicep build
+        uses: aliencube/bicep-build-actions@v0.3
+        with:
+          files: '**/*.bicep'
       - uses: snyk/actions/setup@master
       - name: Snyk Test 
         run: snyk iac test --sarif-file-output=snyk-sarif.json
@@ -36,3 +41,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: snyk-sarif.json
+          
