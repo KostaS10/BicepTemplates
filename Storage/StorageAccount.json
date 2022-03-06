@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.4.1272.37030",
-      "templateHash": "623382977348065533"
+      "templateHash": "4083970553565260346"
     }
   },
   "parameters": {
@@ -32,7 +32,8 @@
         "name": "Standard_LRS"
       },
       "properties": {
-        "supportsHttpsTrafficOnly": true
+        "supportsHttpsTrafficOnly": true,
+        "minimumTlsVersion": "TLS1_2"
       }
     }
   ]
