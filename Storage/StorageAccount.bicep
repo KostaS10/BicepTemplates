@@ -13,5 +13,6 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
   }
   properties: {
     supportsHttpsTrafficOnly: true
+    minimumTlsVersion: 'TLS1_2'
   }
 }
