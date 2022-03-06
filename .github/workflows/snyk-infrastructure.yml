@@ -30,7 +30,8 @@ jobs:
         # Snyk can be used to break the build when it detects security issues.
         # In this case we want to upload the issues to GitHub Code Scanning
         continue-on-error: true
-        #uses: snyk/actions/iac@master
+      - uses: snyk/actions/setup@master
+      - name: Snyk test
         run: snyk iac test --sarif-file-output='snyk.sarif'
         env:
           # In order to use the Snyk Action you will need to have a Snyk API token.
