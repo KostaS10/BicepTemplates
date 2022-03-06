@@ -32,7 +32,7 @@ jobs:
         with:
           files: '**/*.bicep'
       - name: Snyk test
-      - uses: snyk/actions/setup@master
+        uses: snyk/actions/setup@master
       - run: snyk iac test --sarif-file-output=snyk-sarif.json
         continue-on-error: true        
         env:
