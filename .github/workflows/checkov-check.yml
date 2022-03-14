@@ -15,10 +15,6 @@ jobs:
     steps:
       - name: Code checkout
         uses: actions/checkout@v2
-      - name: Run Bicep build
-        uses: aliencube/bicep-build-actions@v0.3
-        with:
-          files: '**/*.bicep'
       - name: Run Checkov action
         id: checkov
         uses: bridgecrewio/checkov-action@master
